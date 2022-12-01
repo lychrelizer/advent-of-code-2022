@@ -6,7 +6,7 @@
 
 ### Part 1
 
-Correct answer is *68787*
+Correct answer is **68787**
 
 ### Part 2
 
