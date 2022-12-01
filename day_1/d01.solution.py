@@ -30,3 +30,8 @@ sums.reverse()
 print(sums[0])
 
 # Part 2 begins here
+# For solution 2 sum of three highest values in list is required
+
+# I guess for just 3 values it's ok to sum them up manually
+sum2 = sums[0] + sums[1] + sums[2]
+print(sum2)

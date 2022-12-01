@@ -10,4 +10,4 @@ Correct answer is **68787**
 
 ### Part 2
 
-Not yet solved
+Correct answer is **198041**
