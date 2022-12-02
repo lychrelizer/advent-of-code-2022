@@ -32,6 +32,26 @@ hand_match = {
     }
 }
 
+# Part 2 has different rules
+hand_match_part2 = {
+    "A" : {
+        "X" : score_scissors + score_lose,
+        "Y" : score_rock + score_draw,
+        "Z" : score_paper + score_win, 
+    },
+    "B" : {
+        "X" : score_rock + score_lose,
+        "Y" : score_paper + score_draw,
+        "Z" : score_scissors + score_win, 
+    },
+    "C" : {
+        "X" : score_paper + score_lose,
+        "Y" : score_scissors + score_draw,
+        "Z" : score_rock + score_win, 
+    }
+
+}
+
 # Some file handling
 input_file = open('input.txt', 'r')
 matches = input_file.readlines()
@@ -43,6 +63,11 @@ for line in matches:
     # split hands
     game = line.split()
     # add the current score
-    total_score += hand_match[game[0]][game[1]]
+
+    # score hand 1
+    #total_score += hand_match[game[0]][game[1]]
+
+    # here comes part 2
+    total_score += hand_match_part2[game[0]][game[1]]
 
 print(total_score)
