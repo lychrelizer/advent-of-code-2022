@@ -5,3 +5,5 @@
 ## Solution
 
 ### Part 1
+
+Correct answer is **13484**
