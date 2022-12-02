@@ -7,3 +7,7 @@
 ### Part 1
 
 Correct answer is **13484**
+
+### Part 2
+
+Correct answer is **13433**
