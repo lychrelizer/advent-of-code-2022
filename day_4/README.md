@@ -6,7 +6,7 @@
 
 ### Part 1
 
-
+Correct answer is **524**
 
 ### Part 2
 
