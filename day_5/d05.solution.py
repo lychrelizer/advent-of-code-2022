@@ -29,6 +29,11 @@ def moveCrate(num, src, dst):
         # remove last element from source
         slots[src] = slots[src][:-1]
 
+# new moving function for part 2
+def moveCrate9001(num, src, dst):
+    slots[dst] += slots[src][len(slots[src])-num:len(slots[src])]
+    slots[src] = slots[src][0:len(slots[src])-num]
+
 # ok.. here we go
 input_file = open('input.txt', 'r')
 lines = input_file.readlines()
@@ -40,12 +45,20 @@ for directions in lines:
 
     # extract all the numbers from directions (items 1, 3 and 5)
     direction = directions.split()
-    moveCrate(int(direction[1]), int(direction[3]), int(direction[5]))
+    
+    # part 1
+    # moveCrate(int(direction[1]), int(direction[3]), int(direction[5]))
+    
+    # part 2
+    moveCrate9001(int(direction[1]), int(direction[3]), int(direction[5]))
+    
 
 # I could use 
 # print(slots)
 # and manually extract the solution, but I want a clean script output. Therefore...
-print('Solution part 1: ', end = '')
+
+# print('Solution part 1: ', end = '')
+print('Solution part 2: ', end = '')
 for x, slot in slots.items():
     print(slot[-1], end = '')
 print()
