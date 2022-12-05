@@ -9,3 +9,5 @@
 Correct answer is **8240**
 
 ### Part 2
+
+Correct answer is **2587**

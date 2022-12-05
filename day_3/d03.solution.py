@@ -7,6 +7,9 @@ input_file = open('input.txt', 'r')
 rucksacks = input_file.readlines()
 
 total_sum = 0
+total_sum_part2 = 0
+
+current_iteration = 0
 
 # Iterate through all lines
 for rucksack in rucksacks:
@@ -37,4 +40,23 @@ for rucksack in rucksacks:
             # kthxbye for-loop
             break
 
-print (total_sum)
+    # calculations for part 2 (every third iteration)
+    if current_iteration % 3 == 0:
+        
+        for item in rucksack:
+            if item in rucksacks[current_iteration+1] and item in rucksacks[current_iteration+2]:
+                
+                # sum calculation is equal to calculation in part 1
+                item_value = bytes(item, 'utf-8')[0]-38 
+                if item_value > 52 :
+                    item_value -= 58
+
+                total_sum_part2 += item_value
+
+                break
+
+    current_iteration += 1
+
+# don't forget the output
+print (f'Solution part 1: {total_sum}')
+print (f'Solution part 2: {total_sum_part2}')
