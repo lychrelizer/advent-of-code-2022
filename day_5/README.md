@@ -9,3 +9,5 @@
 Correct answer is **LBLVVTVLP**
 
 ### Part 2
+
+Correct answer is **TPFFBDRJD**
