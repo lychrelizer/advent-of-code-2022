@@ -1,18 +1,25 @@
 input_file = open ('input.txt', 'r')
 device_input = input_file.read()
 
-marker_character = 3
+# part 1
+# marker_length = 4
 
-for i, character in enumerate(device_input): 
-    marker_character += 1
-    if (
-            character == device_input[i+1] or character == device_input[i+2] or character == device_input[i+3] or
-            device_input[i+1] == device_input[i+2] or device_input[i+1] == device_input[i+3] or
-            device_input[i+2] == device_input[i+3]
-        ):
-            continue
-    else:
-        print(f'Correct solution is: {marker_character}')
-        #print(f'{character}{device_input[i+1]}{device_input[i+2]}{device_input[i+3]}')
+# part 2
+marker_length = 14 
+
+marker_character = marker_length
+
+# finding markers of defined length
+for i, char in enumerate(device_input): 
+
+    # substring to check
+    marker = device_input[i:i+marker_length]
+
+    # compare unique item list length with defined marker length
+    if len(set(marker)) == marker_length:
+        print(f'Solution is {marker_character}')
+        
+        # we can end here
         break
 
+    marker_character += 1

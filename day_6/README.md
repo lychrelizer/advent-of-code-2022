@@ -1,13 +1,13 @@
 # --- Day 5: ---
 
-[Day 5  - Advent of Code 2022](https://adventofcode.com/2022/day/5)
+[Day 6  - Advent of Code 2022](https://adventofcode.com/2022/day/6)
 
 ## Solution
 
 ### Part 1
 
-Correct answer is **LBLVVTVLP**
+Correct answer is **1909**
 
 ### Part 2
 
-Correct answer is **TPFFBDRJD**
+Correct answer is **3380**
